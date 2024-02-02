@@ -1,0 +1,25 @@
+- key: Name
+  value: "Joaquim Alvino de Mesquita Neto" 
+- key: Occupation
+  value: "Senior build tools engineer / DevOps engineer @ Wooga"
+- key: Location
+  value: "Berlin - DE"
+- key: Core technologies
+  value: 
+    - Java/Groovy
+    - Go
+    - Gradle
+    - Ansible
+    - Terraform
+    - AWS
+    - Unity3D
+- key: Projects
+  value: 
+    - "TODO"
+    - "TODO2"
+- key: Socials
+  value:
+  - value: Linkedin  
+    url: https://www.linkedin.com/in/joaquim-alvino-de-mesquita-neto-6ba571a6/
+  - value: Github
+    url: https://github.com/Joaquimmnetto/

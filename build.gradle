@@ -13,5 +13,7 @@ plugins{
 // On debian derived we have to install all those guys for ruby-build (used by net.wooga.asdf) to work. (https://github.com/rbenv/ruby-build/wiki#suggested-build-environment)
 // apt-get install autoconf patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev
 asdfRuby {
-    tool("jekyll", '3.9.3') //github pages version
+    gemfile = file("docs/Gemfile")
 }
+//TODO: https://github.com/actions/starter-workflows/blob/main/pages/jekyll-gh-pages.yml 
+//https://github.com/github/pages-gem/issues/651

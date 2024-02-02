@@ -9,11 +9,26 @@ plugins{
     id 'net.wooga.asdf-ruby' version '1+'
 }
 
+asdf {
+    tool("ruby", "3.2.3") //3.3.0 fails while seriving the current jekyll version https://stackoverflow.com/questions/77851863/bundle-exec-jekyll-serve-not-working-locally
+}
+
 // geez so much for a 'just works', tool, ruby-build.
 // On debian derived we have to install all those guys for ruby-build (used by net.wooga.asdf) to work. (https://github.com/rbenv/ruby-build/wiki#suggested-build-environment)
 // apt-get install autoconf patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev
 asdfRuby {
     gemfile = file("docs/Gemfile")
 }
+
+tasks.register("servePage") {
+    doLast {
+        exec {
+            workingDir "docs"
+            executable asdf.stubsDir.get().file("jekyll").asFile
+            args "serve"
+        }
+    }
+}
+
 //TODO: https://github.com/actions/starter-workflows/blob/main/pages/jekyll-gh-pages.yml 
 //https://github.com/github/pages-gem/issues/651

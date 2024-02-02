@@ -1,0 +1,11 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# ignore asdf tool versions, its generated when you run asdfBinstubs for the first time
+.tool-versions
+
+# Ignore Gradle build output directory
+build
+
+#ignore gradle-generated binstubs
+bin
